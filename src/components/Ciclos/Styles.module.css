@@ -1,0 +1,28 @@
+.cicles {
+  text-align: center;
+}
+.cicles p {
+  margin-bottom: 16px;
+}
+.ciclesDots {
+  display: flex;
+  gap: 4px;
+}
+.ciclesDot {
+  background-color: var(--primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.workTime {
+  background-color: var(--warning);
+}
+
+.pauseTime {
+  background-color: var(--primary);
+}
+
+.longPauseTime {
+  background-color: var(--info);
+}

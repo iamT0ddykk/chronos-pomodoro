@@ -1,0 +1,17 @@
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    color: var(--primary);
+}
+.logoLink{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 4.2rem;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary);
+}

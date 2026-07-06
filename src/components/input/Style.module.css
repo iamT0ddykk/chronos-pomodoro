@@ -1,0 +1,23 @@
+.meuinput{
+    background-color: transparent;
+    border-width: 0;
+    border-bottom: 2px var(--primary) solid;
+    font-style: 16px;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    outline: none;
+    transition: all 0.1s ease;
+}
+
+.meuinput:focus{
+    border-radius: 10px;
+    border-width: 2px;
+    border: solid var(--primary);
+}
+
+.meuinput::placeholder{
+    color: var(--gray-500);
+    font-style: italic;
+    font-size: 16px;
+}

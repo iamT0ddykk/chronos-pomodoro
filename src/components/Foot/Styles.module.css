@@ -1,0 +1,16 @@
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: smaller;
+
+}
+.foot a{
+    color: white;
+    text-decoration: none;
+}
+.foot a:hover{
+    text-decoration: underline;
+}

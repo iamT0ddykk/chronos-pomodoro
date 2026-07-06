@@ -1,0 +1,16 @@
+.butao{
+    background-color: var(--primary);
+    border-radius: 5px;
+    border-width: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.butao:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+}
