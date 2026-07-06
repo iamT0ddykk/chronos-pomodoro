@@ -1,75 +1,145 @@
-# React + TypeScript + Vite
+# ⏳ Chronos Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Chronos Pomodoro** é uma aplicação desenvolvida para ajudar usuários a aumentar a produtividade utilizando a técnica **Pomodoro**, um método de gerenciamento de tempo que alterna períodos de foco intenso com pequenas pausas.
 
-Currently, two official plugins are available:
+## 📖 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O objetivo do Chronos Pomodoro é proporcionar uma experiência simples, intuitiva e eficiente para organizar sessões de estudo, trabalho ou qualquer atividade que exija concentração.
 
-## React Compiler
+Com uma interface limpa e funcionalidades essenciais, o aplicativo permite que o usuário mantenha o foco e acompanhe seu progresso ao longo do tempo.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+* 🍅 Temporizador Pomodoro.
+* ⏸️ Pausar e retomar o cronômetro.
+* 🔄 Reiniciar o ciclo a qualquer momento.
+* 📋 Histórico de ciclos concluídos.
+* 📊 Acompanhamento das sessões realizadas.
+* 🎨 Interface moderna e responsiva.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Este projeto foi desenvolvido utilizando:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React
+* TypeScript
+* Vite
+* Styled Components
+* React Router
+* React Hook Form
+* Context API
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+src/
+├── assets/
+├── components/
+├── contexts/
+├── layouts/
+├── pages/
+├── reducers/
+├── styles/
+├── App.tsx
+├── main.tsx
+└── routes.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Como Executar
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Clone o repositório
+
+```bash
+git clone https://github.com/iamT0ddykk//chronos-pomodoro.git
 ```
+
+### Acesse a pasta
+
+```bash
+cd chronos-pomodoro
+```
+
+### Instale as dependências
+
+```bash
+npm install
+```
+
+### Execute o projeto
+
+```bash
+npm run dev
+```
+
+A aplicação estará disponível em:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🍅 Como funciona a Técnica Pomodoro
+
+A técnica consiste em:
+
+1. Escolher uma tarefa.
+2. Trabalhar por **25 minutos**.
+3. Fazer uma pausa de **5 minutos**.
+4. Após quatro ciclos, realizar uma pausa maior de **15 a 30 minutos**.
+
+---
+
+## 🔮 Melhorias Futuras
+
+* Login de usuários.
+* Sincronização em nuvem.
+* Estatísticas avançadas.
+* Personalização dos tempos dos ciclos.
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!
+
+1. Faça um Fork do projeto.
+2. Crie uma branch para sua feature.
+
+```bash
+git checkout -b feature/minha-feature
+```
+
+3. Faça seus commits.
+
+```bash
+git commit -m "feat: adiciona nova funcionalidade"
+```
+
+4. Envie para sua branch.
+
+```bash
+git push origin feature/minha-feature
+```
+
+5. Abra um Pull Request.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença **MIT**.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido com ❤️ por iamT0ddykk, para auxiliar estudantes, profissionais e qualquer pessoa que deseje melhorar sua produtividade utilizando a técnica Pomodoro.
