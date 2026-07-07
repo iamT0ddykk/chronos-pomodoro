@@ -12,26 +12,32 @@ Com uma interface limpa e funcionalidades essenciais, o aplicativo permite que o
 
 ## ✨ Funcionalidades
 
-* 🍅 Temporizador Pomodoro.
-* ⏸️ Pausar e retomar o cronômetro.
-* 🔄 Reiniciar o ciclo a qualquer momento.
-* 📋 Histórico de ciclos concluídos.
-* 📊 Acompanhamento das sessões realizadas.
-* 🎨 Interface moderna e responsiva.
+- 🍅 Temporizador Pomodoro.
+- ⏸️ Pausar e retomar o cronômetro.
+- 🔄 Reiniciar o ciclo a qualquer momento.
+- 📋 Histórico de ciclos concluídos.
+- 📊 Acompanhamento das sessões realizadas.
+- 🎨 Interface moderna e responsiva.
 
 ---
+
+## 🎥 Demonstração
+
+![Screenshots](public/Screenshot%20chronos1.png)
+![Screenshots](public/Screenshot%20chronos2.png)
+![Screenshots](public/Screenshot%20chronos3.png)
 
 ## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando:
 
-* React
-* TypeScript
-* Vite
-* Styled Components
-* React Router
-* React Hook Form
-* Context API
+- React
+- TypeScript
+- Vite
+- Styled Components
+- React Router
+- React Hook Form
+- Context API
 
 ---
 
@@ -100,10 +106,10 @@ A técnica consiste em:
 
 ## 🔮 Melhorias Futuras
 
-* Login de usuários.
-* Sincronização em nuvem.
-* Estatísticas avançadas.
-* Personalização dos tempos dos ciclos.
+- Login de usuários.
+- Sincronização em nuvem.
+- Estatísticas avançadas.
+- Personalização dos tempos dos ciclos.
 
 ---
 
