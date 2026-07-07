@@ -4,23 +4,39 @@ import { TaskContext } from "./TaskContext";
 import { taskReducer } from "./TaskReducer";
 import { TaskActionTypes } from "./taskActions";
 import { loadBeep } from "../../utils/loadBepps";
+import { TaskStateModel } from "../../models/TaskStateModel";
 
 type TaskContextProviderProps = {
   children: React.ReactNode;
 };
 
 export function TaskContextProvider({ children }: TaskContextProviderProps) {
-  const [state, dispatch] = useReducer(taskReducer, initialTaskState);
+  const [state, dispatch] = useReducer(taskReducer, initialTaskState, () => {
+    const storageState = localStorage.getItem("state");
+
+    if (storageState === null) return initialTaskState;
+
+    const parsedStorageState = JSON.parse(storageState) as TaskStateModel;
+
+    return {
+      ...parsedStorageState,
+      activeTask: null,
+      secondsRemaining: 0,
+      formattedSecondsRemaining: "00:00",
+    };
+  });
   const playBeepRef = useRef<ReturnType<typeof loadBeep> | null>(null);
 
   if (state.activeTask?.name != undefined) {
-    document.title = `${state.activeTask?.name} ${state.formattedSecondsRemaining} - chronos`;
+    document.title = `${state.activeTask?.name} - ${state.formattedSecondsRemaining} - chronos`;
   }
   if (state.secondsRemaining <= 0) {
     document.title = `chronos`;
   }
 
   useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+
     if (!state.activeTask) return;
 
     const endDate = state.activeTask.startDate + state.secondsRemaining * 1000;

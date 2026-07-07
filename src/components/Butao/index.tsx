@@ -41,7 +41,7 @@ export function Butao() {
         <RouterLink className={styles.butao} title="Ir pra home" href="/">
           <HouseIcon></HouseIcon>
         </RouterLink>
-        <RouterLink className={styles.butao} title="Ir pro historico" href="/history">
+        <RouterLink className={styles.butao} title="Ir pro historico" href="/history" >
           <TimerIcon></TimerIcon>
         </RouterLink>
         <RouterLink

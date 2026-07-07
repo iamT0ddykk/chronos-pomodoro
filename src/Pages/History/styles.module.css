@@ -1,0 +1,38 @@
+:root {
+  /* 🎭 Tons de Cinza (cores dinâmicas que mudam entre claro/escuro) */
+  --gray-100: #e6e9f0; /* Cinza mais claro (usado para fundos no modo escuro) */
+  --gray-200: #cdd3e1;
+  --gray-300: #aab3cc;
+  --gray-400: #555f7d;
+  --gray-500: #454f6a;
+  --gray-600: #363d56;
+  --gray-700: #272f43; /* Bordas e separadores */
+  --gray-800: #181f2e; /* Fundo de cartões e áreas destacadas */
+  --gray-900: #0a0f1a; /* Fundo principal do site */
+}
+.buttonContainer button {
+  width: 55px;
+  height: 50px;
+}
+.resposiveTable {
+  overflow-x: auto;
+  border-radius: 5px;
+}
+.resposiveTable table {
+  width: 100%;
+  min-width: 64px;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+.resposiveTable th {
+  background-color: var(--gray-600);
+  border-bottom: 0.2rem solid var(--gray-700);
+  text-align: left;
+  padding: 1.6rem;
+}
+.resposiveTable td {
+  background-color: var(--gray-800);
+  border-bottom: 0.2rem solid var(--gray-700);
+  text-align: left;
+  padding: 1.6rem;
+}
