@@ -13,6 +13,13 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
   const [state, dispatch] = useReducer(taskReducer, initialTaskState);
   const playBeepRef = useRef<ReturnType<typeof loadBeep> | null>(null);
 
+  if (state.activeTask?.name != undefined) {
+    document.title = `${state.activeTask?.name} ${state.formattedSecondsRemaining} - chronos`;
+  }
+  if (state.secondsRemaining <= 0) {
+    document.title = `chronos`;
+  }
+
   useEffect(() => {
     if (!state.activeTask) return;
 
@@ -23,7 +30,6 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
 
       if (seconds <= 0) {
         if (playBeepRef.current) {
-          console.log("tocando");
           playBeepRef.current();
           playBeepRef.current = null;
         }
@@ -45,9 +51,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
   useEffect(() => {
     if (state.activeTask && playBeepRef.current === null) {
       playBeepRef.current = loadBeep();
-      console.log("carregando");
     } else {
-      console.log("zerando");
       playBeepRef.current = null;
     }
   }, [state.activeTask]);

@@ -29,18 +29,10 @@
   text-decoration: underline;
 }
 
-.genericHtml ul{
+.genericHtml ul {
   padding-left: 2.4rem;
 }
 
 .genericHtml li {
   margin-bottom: 0.8rem;
-}
-
-.genericHtml img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.8rem;
-  display: block;
-  margin: 1.6rem 0;
 }

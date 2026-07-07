@@ -1,12 +1,15 @@
 import styles from "./Styles.module.css";
+import { RouterLink } from "../RouterLink";
 
 export function Foot() {
   return (
     <footer className={styles.foot}>
-      <a href="/about-pomodoro">Entenda como funciona a tecnica de pomodoro</a>
-      <a href="/">
+      <RouterLink href="/about-pomodoro">
+        Entenda como funciona a tecnica de pomodoro
+      </RouterLink>
+      <RouterLink href="/">
         Choronos pomodoro &copy; {new Date().getFullYear()} - Feito com 💚{" "}
-      </a>
+      </RouterLink>
     </footer>
   );
 }

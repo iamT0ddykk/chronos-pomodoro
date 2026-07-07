@@ -1,0 +1,11 @@
+.gatin {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  transition: all ease 500ms;
+  border-radius: 10px;
+}
+.gatin:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}

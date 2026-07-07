@@ -18,7 +18,7 @@ export function MainForm() {
   const taskNameInput = useRef<HTMLInputElement>(null);
   const nextCycle = getNextCycle(state.currentCycle);
   const NextCycleType = nextCycleType(nextCycle);
-
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name
   function handleInterruptTask() {
     showMessage.error(`Tarefe ${taskName} interrompida!`);
     dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
@@ -34,7 +34,7 @@ export function MainForm() {
       showMessage.warning("Digite o nome da tarefa!");
       return;
     } else {
-      showMessage.sucess(`Tarefa ${taskName}iniciada!`);
+      showMessage.sucess(`Tarefa ${taskName} iniciada!`);
     }
 
     const newTask: TaskModel = {
@@ -64,12 +64,13 @@ export function MainForm() {
           <MeuInput
             id="MeuInput"
             type="text"
-            labelText="textao"
+            labelText="Digite sua Task:"
             placeholder="Digite"
             value={taskName}
             onChange={(e) => setTaskName(e.target.value)}
             ref={taskNameInput}
             disabled={!!state.activeTask}
+            defaultValue={lastTaskName}
           ></MeuInput>
         </div>
         <div className="formRow">
