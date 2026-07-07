@@ -26,6 +26,7 @@ Com uma interface limpa e funcionalidades essenciais, o aplicativo permite que o
 ![Screenshots](public/Screenshot%20chronos1.png)
 ![Screenshots](public/Screenshot%20chronos2.png)
 ![Screenshots](public/Screenshot%20chronos3.png)
+![Screenshots](public/Screenshot%20chronos4.png)
 
 ## 🛠️ Tecnologias Utilizadas
 

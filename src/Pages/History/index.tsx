@@ -29,7 +29,7 @@ export function History() {
               <thead>
                 <tr>
                   <th>Tarefa</th>
-                  <th>Duracao</th>
+                  <th>Duração</th>
                   <th>Data</th>
                   <th>Status</th>
                   <th>Tipo</th>
@@ -40,9 +40,9 @@ export function History() {
                 {Array.from({ length: 20 }).map((_, index) => {
                   return (
                     <tr key={index}>
-                      <td>estudar</td>
+                      <td>Estudar</td>
                       <td>25min</td>
-                      <td>20/04/2025 08:00</td>
+                      <td>01/06/2026 00:00</td>
                       <td>completa</td>
                       <td>foco</td>
                     </tr>
