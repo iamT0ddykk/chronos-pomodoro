@@ -8,9 +8,19 @@ import { Heading } from "../../components/Heading";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 import { formatDate } from "../../utils/formatDate";
 import { getTaskStatus } from "../../utils/getTaskStatus";
+import { sortTasks } from "../../utils/sortTasks";
+import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
 console.log(styles);
 export function History() {
-  const { state } = useTaskContext();
+  const { state, dispatch } = useTaskContext();
+  const sortedTasks = sortTasks({ tasks: state.tasks });
+  function handleResetHistory() {
+    if (!confirm("tem certeza que deseja apagar TODO o historico?")) return;
+
+    dispatch({ type: TaskActionTypes.RESET_STATE });
+    localStorage.removeItem("state");
+  }
+
   return (
     <>
       <MainTemplate>
@@ -23,9 +33,7 @@ export function History() {
                 color="red"
                 aria-label="Apagar todo o historico"
                 title="Apagar"
-                onClick={() => {
-                  localStorage.clear();
-                }}
+                onClick={handleResetHistory}
               ></MeuButaoDefault>
             </span>
           </Heading>
@@ -44,7 +52,7 @@ export function History() {
               </thead>
 
               <tbody>
-                {state.tasks.map((task) => {
+                {sortedTasks.map((task) => {
                   const taskTypeDictionary = {
                     workTime: "Foco",
                     shortBreakTime: "Descanso curto",
