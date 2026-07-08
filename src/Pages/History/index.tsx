@@ -5,8 +5,11 @@ import { MeuButaoDefault } from "../../components/ButaoDefault";
 
 import styles from "./styles.module.css";
 import { Heading } from "../../components/Heading";
+import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
 console.log(styles);
 export function History() {
+  const { state } = useTaskContext();
+
   return (
     <>
       <MainTemplate>
@@ -37,24 +40,17 @@ export function History() {
               </thead>
 
               <tbody>
-                {Array.from({ length: 20 }).map((_, index) => {
+                {state.tasks.map((task) => {
                   return (
-                    <tr key={index}>
-                      <td>Estudar</td>
-                      <td>25min</td>
-                      <td>01/06/2026 00:00</td>
-                      <td>completa</td>
-                      <td>foco</td>
+                    <tr key={task.id}>
+                      <td>{task.name}</td>
+                      <td>{task.duration}min</td>
+                      <td>{new Date(task.startDate).toISOString()}</td>
+                      <td>{task.interruptDate}</td>
+                      <td>{task.type}</td>
                     </tr>
                   );
                 })}
-                <tr>
-                  <td>estudar</td>
-                  <td>25min</td>
-                  <td>20/04/2025 08:00</td>
-                  <td>completa</td>
-                  <td>foco</td>
-                </tr>
               </tbody>
             </table>
           </div>

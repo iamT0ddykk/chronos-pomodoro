@@ -18,7 +18,8 @@ export function MainForm() {
   const taskNameInput = useRef<HTMLInputElement>(null);
   const nextCycle = getNextCycle(state.currentCycle);
   const NextCycleType = nextCycleType(nextCycle);
-  const lastTaskName = state.tasks[state.tasks.length - 1]?.name
+  const lastTaskName = state.tasks[state.tasks.length - 1]?.name;
+
   function handleInterruptTask() {
     showMessage.error(`Tarefe ${taskName} interrompida!`);
     dispatch({ type: TaskActionTypes.INTERRUPT_TASK });
