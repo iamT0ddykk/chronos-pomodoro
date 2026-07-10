@@ -10,8 +10,13 @@ import { formatDate } from "../../utils/formatDate";
 import { getTaskStatus } from "../../utils/getTaskStatus";
 import { sortTasks } from "../../utils/sortTasks";
 import { TaskActionTypes } from "../../contexts/TaskContext/taskActions";
-console.log(styles);
+import { useEffect } from "react";
+
 export function History() {
+  useEffect(() => {
+    document.title = "Historico - Chronos";
+  }, []);
+
   const { state, dispatch } = useTaskContext();
   const sortedTasks = sortTasks({ tasks: state.tasks });
   function handleResetHistory() {

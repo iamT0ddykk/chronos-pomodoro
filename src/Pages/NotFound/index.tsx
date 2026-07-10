@@ -4,8 +4,12 @@ import { GenericHtml } from "../../components/GenericHtml";
 import { Heading } from "../../components/Heading";
 import { MainTemplate } from "../../templates/MainTemplate";
 import gat from "../../../public/gatinho.gif";
+import { useEffect } from "react";
 
 export function NotFound() {
+  useEffect(() => {
+    document.title = "Pagina não encontrada - Chronos";
+  }, []);
   return (
     <>
       <MainTemplate>
